@@ -1,6 +1,6 @@
 import PageType from './PageType.js'
 import PreviewPages from './PreviewPages.js'
-import { isEmpty, getCurrentScrollHeight, isScrollNotEnd } from '../../../utils/Utils.js';
+import { isEmpty, getScrollHeight, isNotEnd } from '../../../utils/Utils.js';
 import QueryDo from './QueryDo.js';
 import PreviewDo from './PreviewDo.js';
 
@@ -107,7 +107,7 @@ class HomeStateDo {
     }
 
     async onScroll() {
-        if (isScrollNotEnd(getCurrentScrollHeight())) return;
+        if (isNotEnd(getScrollHeight())) return;
         await this.pages.onScrollEnd();
         localStorage.setItem("pages", JSON.stringify(this.pages));
     }
