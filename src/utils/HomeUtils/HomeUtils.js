@@ -15,13 +15,6 @@ class HomeUtils {
         }
     };
 
-
-    static scrollEnd = async (state) => {
-        const newState = new HomeStateDo(state);
-        await newState.pages.onScrollEnd();
-        return newState;
-    }
-
 }
 
 export default HomeUtils;
