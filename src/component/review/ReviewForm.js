@@ -20,6 +20,7 @@ const ReviewForm = (props) => {
 
     const handleButtonClick = async () => {
         let response = await composeRequest(title, review, book);
+        console.log(response);
     };
 
     return (
